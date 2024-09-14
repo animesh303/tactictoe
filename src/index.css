@@ -1,0 +1,177 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+/* .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+} */
+
+.game,
+
+.main-content {
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game.light {
+  background-color: #fafafa;
+  color: #000;
+}
+
+.game.dark {
+  background-color: #303030;
+  color: #fff;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 30vw;
+  height: 30vw;
+  max-width: 100px;
+  max-height: 100px;
+  background-color: inherit;
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #000000;
+  /* Default text color for light theme */
+}
+
+/* Adjust text color in dark theme */
+.game.dark .square {
+  color: #ffffff;
+  /* White text in dark theme */
+}
+
+.square:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square.highlight {
+  background-color: #ffeb3b;
+  animation: glow 1s infinite alternate;
+}
+
+.player-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: none;
+}
+
+.player-section input[type="file"] {
+  margin-left: 10px;
+}
+
+.player-score {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.player-score p {
+  margin-left: 10px;
+}
+
+
+.player-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  max-width: none;
+}
+
+.scores,
+.controls {
+  margin: 10px;
+}
+
+.scores p {
+  margin: 5px;
+}
+
+.controls button {
+  /* margin: 5px; */
+  margin-bottom: 10px;
+}
+
+.status {
+  margin: 10px;
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  .square {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.square-image {
+  width: 80%;
+  height: 80%;
+}
+
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ffeb3b;
+  }
+
+  to {
+    box-shadow: 0 0 20px #ffeb3b;
+  }
+}
+
+.player-section div:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
